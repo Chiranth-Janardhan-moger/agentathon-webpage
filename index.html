@@ -519,6 +519,91 @@
       margin-bottom: 36px;
     }
 
+    .speaker-section {
+      display: grid;
+      grid-template-columns: minmax(180px, 1fr) minmax(320px, 1.4fr);
+      gap: 28px;
+      align-items: center;
+      padding: 36px 34px;
+      margin-bottom: 32px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .speaker-photo {
+      width: 100%;
+      max-width: 320px;
+      overflow: hidden;
+      border-radius: 24px;
+      background: #f6f6f6;
+      box-shadow: var(--shadow);
+    }
+
+    .speaker-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 3 / 4;
+    }
+
+    .speaker-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .speaker-label {
+      margin: 0;
+      color: #d2232a;
+      font: 700 13px "Montserrat", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .speaker-details h2 {
+      margin: 0;
+      font-size: clamp(28px, 3.5vw, 44px);
+      line-height: 1.05;
+      letter-spacing: 0.5px;
+    }
+
+    .speaker-details p {
+      margin: 0;
+      color: #23232a;
+      font-size: 16px;
+      line-height: 1.9;
+      max-width: 680px;
+    }
+
+    .speaker-highlights {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .speaker-highlights li {
+      position: relative;
+      margin: 0;
+      padding-left: 22px;
+      color: #30343f;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .speaker-highlights li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #d2232a;
+      font-size: 22px;
+      line-height: 1;
+    }
+
     .card,
     .panel {
       background: rgba(255, 255, 255, 0.88);
@@ -1134,9 +1219,18 @@
       .highlight-grid,
       .problem-grid,
       .prize-grid,
+      .speaker-section,
       .contact-bar,
       .footer {
         grid-template-columns: 1fr;
+      }
+
+      .speaker-section {
+        padding: 28px 22px;
+      }
+
+      .speaker-photo {
+        max-width: 100%;
       }
 
       .countdown-grid {
@@ -1279,6 +1373,18 @@
 
       .hero .register-btn {
         min-width: 220px;
+      }
+
+      .speaker-section {
+        padding: 26px 18px;
+      }
+
+      .speaker-details {
+        gap: 18px;
+      }
+
+      .speaker-details h2 {
+        font-size: 30px;
       }
 
       .content {
@@ -1567,6 +1673,22 @@
           </div>
         </section>
 
+        <section class="speaker-section reveal" id="speaker">
+          <div class="speaker-photo">
+            <img src="speaker.jpg" alt="Speaker photo">
+          </div>
+          <div class="speaker-details">
+            <p class="speaker-label">Featured Speaker</p>
+            <h2><b>>Pranali Bose</b></h2>
+            <p> A Machine Learning Engineer at Apple with extensive experience in AI, Data Science, and Generative AI. She has previously worked with leading companies including DBS, Walmart, Accenture, and Bosch, building impactful AI-driven solutions.
+              <ul class="speaker-highlights">
+              <li>ML and DATA engineer &amp; NLP</li>
+              <li>Expert in Generative AI</li>
+              <li>Expert in Scalable ML systems</li>
+            </ul>
+          </div>
+        </section>
+
         <section id="problem-statements" class="panel reveal">
           <h2 class="section-title">Problem Statements</h2>
           <div class="title-line"></div>
@@ -1612,7 +1734,7 @@
                   <div class="prize-label">Prize Pool:</div>
                   <div class="amount">&#8377;9,000</div>
                 </div>
-                <div class="fee">Registration Fee: &#8377;200 per team</div>
+                <div class="fee"> FREE Registration </div>
               </div>
             </div>
 
@@ -1652,7 +1774,7 @@
                 <path d="M6.6 3.6 9 3l2.2 5-1.6 1.5c1 2 2.7 3.6 4.8 4.8l1.5-1.6 5 2.2-.6 2.4c-.4 1.5-1.7 2.5-3.2 2.4C9.9 19.2 4.8 14.1 4.3 7c-.1-1.6.9-3 2.3-3.4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
               </svg>
             </span>
-            <span>Rehan<br>9019631104</span>
+            <span> Mohammed Rehan<br>9019631104</span>
           </div>
           <div class="contact-item">
             <span class="contact-icon">
